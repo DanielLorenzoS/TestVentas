@@ -25,8 +25,7 @@ async function cargarPersonas() {
                                 <div class="entry">${persona.apellidoMaterno}  </div>                              
                               </div>
                               <div class="cont-edit">
-                                <div class="entry eliminar">  Eliminar  </div>
-                                <div class="entry editar">  Editar  </div>
+                                <div onclick="eliminarPersona(${persona.id})" class="entry eliminar">  Eliminar  </div>
                               </div>
                               
                          </div><br>`;
@@ -36,6 +35,16 @@ async function cargarPersonas() {
 
   document.querySelector(".content").outerHTML = listadoHtml;
 }
-
 cargarPersonas();
-console.log("wenas");
+
+async function eliminarPersona(id) {
+  if (confirm("Deseas eliminar este usuario?")) {
+    const request = await fetch("/persona/delete/"+id, {
+      method: "DELETE",
+      headers: getHeaders(),
+    });
+  } else {
+    return;
+  }
+  location.reload();
+}

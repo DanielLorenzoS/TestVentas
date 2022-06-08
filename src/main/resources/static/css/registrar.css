@@ -12,20 +12,17 @@ body {
 }
 .cont-login {
   width: 75%;
-  height: 60vh;
+  height: 80vh;
   background-color: #222222;
   display: flex;
   text-align: center;
   margin: 20px;
 }
-.img {
-  width: 50%;
-}
 .inputs {
-  width: 50%;
+  width: 70%;
   border: 2px solid #121212;
   display: flex;
-  
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 }
@@ -33,30 +30,26 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  
+  margin-bottom: 100px;
 }
 .input {
-  flex-wrap: nowrap;
   font-size: 18px;
-  width: 60%;
+  width: 100%;
   border-radius: 10px;
-  margin-top: 90px;
+  margin-bottom: 20px;
   padding: 15px;
   background-color: #666;
   transition: 0.3s linear;
   border: none;
-  display: inline-block;
 }
 .input:hover {
   background-color: #555;
 }
-
 .ingresar {
-  position: absolute;
-  margin-top: 350px;
-  padding: 0 -10px;
+  margin-top: 500px;
+  padding: 0 10px;
   border-radius: 10px;
-  border: 2.5px solid rgb(1, 80, 7);
+  border-bottom: 4px solid rgb(1, 80, 7);
   background-color: rgb(0, 116, 10);
   transition: 0.5s linear;
   text-decoration: none;
@@ -70,4 +63,5 @@ body {
 }
 .h3 {
   color: white;
+  cursor: pointer;
 }

@@ -12,5 +12,7 @@ public interface PersonaRepository extends CrudRepository<Persona, Long>{
     public abstract ArrayList<Persona> findPersonaByIdentificacion(Integer identificacion);
 
     public abstract ArrayList<Persona> deletePersonaByIdentificacion(Integer identificacion);
+
+    public abstract ArrayList<Persona> findByCorreo(String correo);
     
 }

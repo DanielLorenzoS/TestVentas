@@ -16,42 +16,58 @@ body {
   background-color: #222222;
   display: flex;
   text-align: center;
+  margin: 20px;
+}
+.img {
+  width: 50%;
 }
 .inputs {
-  width: 60%;
+  width: 50%;
   border: 2px solid #121212;
   display: flex;
-  justify-content: center;
+  
   align-items: center;
   flex-direction: column;
 }
-.input,
-.ingresar {
-  font-size: 20px;
+.cont-inputs {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  
+}
+.input {
+  flex-wrap: nowrap;
+  font-size: 18px;
+  width: 60%;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-top: 90px;
   padding: 15px;
   background-color: #666;
   transition: 0.3s linear;
-  position: absolute;
   border: none;
-}
-.input:nth-child(1) {
-  margin-top: -200px;
+  display: inline-block;
 }
 .input:hover {
   background-color: #555;
 }
+
 .ingresar {
-  margin-top: 300px;
-  padding: 10px;
-  border-bottom: 4px solid rgb(1, 80, 7);
+  position: absolute;
+  margin-top: 350px;
+  padding: 0 -10px;
+  border-radius: 10px;
+  border: 2.5px solid rgb(1, 80, 7);
   background-color: rgb(0, 116, 10);
-  transition: 0.3s linear;
+  transition: 0.5s linear;
+  text-decoration: none;
+  cursor: pointer;
 }
 .ingresar:active {
   border: none;
 }
 ::placeholder {
+  color: white;
+}
+.h3 {
   color: white;
 }

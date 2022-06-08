@@ -10,26 +10,38 @@
   <body>
     <div class="container">
       <div class="cont-login">
-        <img src="./images/login.svg" th:src="{@images/login.svg}" width="40%" height="100%" />
-
+        <img
+        class="img"
+          src="./images/login.svg"
+          th:src="{@images/login.svg}"
+          width="40%"
+          height="90%"
+        />
         <div class="inputs">
-          <input
+
+            <input
             class="input"
             type="text"
             name="correo"
-            id="correo"
+            id="txtCorreo"
             placeholder="Ingresa tu correo..."
-          />
-          <input
+            />
+            <input
             class="input"
             type="password"
             name="contraseña"
-            id="contraseña"
+            id="txtContraseña"
             placeholder="Ingresa tu contraseña..."
-          />
-          <a href="" class="ingresar">Ingresar</a>
+            />
+            <a onclick="entrarPerfil()" class="ingresar"
+            ><h3 class="h3">Iniciar sesión</h3></a
+            >
+        </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <script src="./js/Login.js"></script>
   </body>
 </html>

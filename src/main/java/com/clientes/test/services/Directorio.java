@@ -13,7 +13,9 @@ public class Directorio {
   @Autowired
   PersonaRepository personaRepository;
 
-  public ArrayList<Persona> obtenerPersonaPorIdentificacion(Integer identificacion) {
+  public ArrayList<Persona> obtenerPersonaPorIdentificacion(
+    Integer identificacion
+  ) {
     return personaRepository.findPersonaByIdentificacion(identificacion);
   }
 
@@ -35,4 +37,17 @@ public class Directorio {
   public Persona guardarPersona(Persona persona) {
     return personaRepository.save(persona);
   }
+
+  public boolean eliminarPorId(Long id) {
+    try {
+      personaRepository.deleteById(id);
+      return true;
+    } catch (Exception e) {
+      return false;
+    }
+  }
+
+public ArrayList<Persona> obtenerPersonaPorCorreo(String correo) {
+    return personaRepository.findByCorreo(correo);
+}
 }

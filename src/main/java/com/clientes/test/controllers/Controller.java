@@ -31,18 +31,36 @@ public class Controller {
 
   @GetMapping("/query")
   public ArrayList<Persona> obtenerPersonaPorIdentificacion(
-    @RequestParam("identificacion") Integer identificacion) {
-      ArrayList<Persona> toDelete = this.personaService.obtenerPersonaPorIdentificacion(identificacion);
-      return toDelete;
-    }
+    @RequestParam("identificacion") Integer identificacion
+  ) {
+    return this.personaService.obtenerPersonaPorIdentificacion(identificacion);
+  }
 
   @DeleteMapping(value = "/{identificacion}")
-  public String eliminarPersonaPorIdentificador(@PathVariable("identificacion") Integer identificacion){
-      boolean ok = this.personaService.eliminarPersonaPorIdentificacion(identificacion);
-      if (ok){
-          return "Se eliminó a la persona seleccionada";
-      }else {
-        return "No se pudo eliminar a la persona seleccionada";
-      }
+  public String eliminarPersonaPorIdentificador(
+    @PathVariable("identificacion") Integer identificacion
+  ) {
+    boolean ok =
+      this.personaService.eliminarPersonaPorIdentificacion(identificacion);
+    if (ok) {
+      return "Se eliminó a la persona seleccionada";
+    } else {
+      return "No se pudo eliminar a la persona seleccionada";
+    }
+  }
+
+  @DeleteMapping(value = "/delete/{id}")
+  public String eliminarPorId(@PathVariable("id") Long id) {
+    boolean ok = this.personaService.eliminarPorId(id);
+    if (ok) {
+      return "Se eliminó a la persona seleccionada";
+    } else {
+      return "No se pudo eliminar a la persona seleccionada";
+    }
+  }
+
+  @GetMapping("/login/query")
+  public ArrayList<Persona> obtenerPersonaPorCorreo(@RequestParam("correo") String correo) {
+    return this.personaService.obtenerPersonaPorCorreo(correo);
   }
 }

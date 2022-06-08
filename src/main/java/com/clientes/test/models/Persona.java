@@ -28,6 +28,12 @@ public class Persona {
   @NonNull
   private int identificacion;
 
+  @NonNull
+  private String correo;
+
+  @NonNull
+  private String contraseña;
+
   public Long getId() {
     return id;
   }
@@ -67,4 +73,21 @@ public class Persona {
   public void setIdentificacion(int identificacion) {
     this.identificacion = identificacion;
   }
+
+  public String getCorreo() {
+    return correo;
+  }
+
+  public void setCorreo(String correo) {
+    this.correo = correo;
+  }
+
+  public String getContraseña() {
+    return contraseña;
+  }
+
+  public void setContraseña(String contraseña) {
+    this.contraseña = contraseña;
+  }
+  
 }
