@@ -9,22 +9,24 @@ body {
     height: 90vh;
 }
 .table {
+    font-size: 22px;
     margin: auto;
-    background-color: #323232;
     display: inline-block;
     margin: 15px;
     padding: 15px;
     position: relative;
-}
-.table:hover {
-    background-color: #222222;
 }
 .cont-entry, .cont-edit {
     display: inline-block;
 }
 .entry {
     display: inline-block;
+    padding: 6px;
+    border-radius: 8px;
     cursor: default;
+}
+.entry:hover {
+    background-color: #222222;
 }
 .eliminar, .editar {
     font-size: 24px;
@@ -42,5 +44,5 @@ body {
     width: 100%;
 }
 .eliminar {
-    margin-left: 150px;
+    margin-left: 100px;
 }

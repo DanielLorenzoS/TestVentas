@@ -1,12 +1,11 @@
-/* package com.clientes.test.repositories;
-
-import java.util.ArrayList;
-
-import org.springframework.data.repository.CrudRepository;
+package com.clientes.test.repositories;
 
 import com.clientes.test.models.Factura;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface FacturaRepository extends CrudRepository<Factura, Long>{
-    public abstract ArrayList<Factura> findFacturasByPersona(Long id);
+@Repository
+public interface FacturaRepository extends CrudRepository<Factura, Long> {
+
 }
- */

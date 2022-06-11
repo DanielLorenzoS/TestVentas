@@ -1,21 +1,23 @@
-/* package com.clientes.test.services;
-
-import java.util.ArrayList;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package com.clientes.test.services;
 
 import com.clientes.test.models.Factura;
 import com.clientes.test.repositories.FacturaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 
 @Service
 public class Ventas {
-    
+
     @Autowired
     FacturaRepository facturaRepository;
 
-    public ArrayList<Factura> findFacturasByPersona(Long id){
-        return facturaRepository.findFacturasByPersona(id);
+    public Factura guardarFactura(Factura factura){
+        return facturaRepository.save(factura);
+    }
+
+    public ArrayList<Factura> findFacturas(){
+        return (ArrayList<Factura>) facturaRepository.findAll();
     }
 }
- */

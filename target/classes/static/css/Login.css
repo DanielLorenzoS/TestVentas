@@ -23,24 +23,15 @@ body {
 }
 .inputs {
   width: 50%;
-  border: 2px solid #121212;
-  display: flex;
-  
-  align-items: center;
-  flex-direction: column;
-}
-.cont-inputs {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  
+  border-left: 7px dotted #0e6ae0;
+  margin: auto;
 }
 .input {
   flex-wrap: nowrap;
   font-size: 18px;
-  width: 60%;
+  width: 70%;
   border-radius: 10px;
-  margin-top: 90px;
+  margin: 20px;
   padding: 15px;
   background-color: #666;
   transition: 0.3s linear;
@@ -49,21 +40,39 @@ body {
 }
 .input:hover {
   background-color: #555;
+  overflow: hidden;
 }
 
-.ingresar {
-  position: absolute;
-  margin-top: 350px;
-  padding: 0 -10px;
+.ingresar, .registrar {
+  margin: 10px;
+  margin-bottom: 5px;
   border-radius: 10px;
-  border: 2.5px solid rgb(1, 80, 7);
-  background-color: rgb(0, 116, 10);
+  padding: 0 10px;
   transition: 0.5s linear;
   text-decoration: none;
   cursor: pointer;
+  display: inline-block;
+  transform-style: preserve-3d;
+
 }
-.ingresar:active {
-  border: none;
+.ingresar::after, .registrar::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 6vh;
+  background-color: rgb(0, 116, 10);
+  border-radius: 10px;
+  transition: 0.5s ease;
+  margin-left: -4px;
+  margin-top: -55px;
+  position: absolute;
+  transform: translateZ(-1px);
+}
+.ingresar:hover::after {
+  width: 112px;
+}
+.registrar:hover::after {
+  width: 97px;
 }
 ::placeholder {
   color: white;

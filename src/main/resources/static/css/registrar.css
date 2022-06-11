@@ -12,7 +12,7 @@ body {
 }
 .cont-login {
   width: 75%;
-  height: 80vh;
+  height: 70vh;
   background-color: #222222;
   display: flex;
   text-align: center;
@@ -20,21 +20,13 @@ body {
 }
 .inputs {
   width: 70%;
-  border: 2px solid #121212;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+  margin: auto;
+  border-left: 7px dotted #0e6ae0;
 }
-.cont-inputs {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  margin-bottom: 100px;
-}
+
 .input {
   font-size: 18px;
-  width: 100%;
+  width: 60%;
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 15px;
@@ -45,23 +37,43 @@ body {
 .input:hover {
   background-color: #555;
 }
-.ingresar {
-  margin-top: 500px;
-  padding: 0 10px;
-  border-radius: 10px;
-  border-bottom: 4px solid rgb(1, 80, 7);
-  background-color: rgb(0, 116, 10);
-  transition: 0.5s linear;
-  text-decoration: none;
-  cursor: pointer;
+.registrar {
+  margin: 15px;
+  display: inline-block;
 }
 .ingresar:active {
   border: none;
 }
+
 ::placeholder {
   color: white;
 }
-.h3 {
+.h3, .h3Registrar {
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
   color: white;
   cursor: pointer;
+  transform-style: preserve-3d;
+}
+.h3::after, .h3Registrar::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 6vh;
+  background-color: rgb(0, 116, 10);
+  border-radius: 10px;
+  transition: 0.5s ease;
+  margin-left: -4px;
+  margin-top: -36px;
+  position: absolute;
+  transform: translateZ(-1px);
+}
+.h3:hover::after {
+  width: 95px;
+}
+.h3Registrar:hover::after {
+  width: 123px;
 }

@@ -19,10 +19,10 @@ async function cargarPersonas() {
   for (let persona of personas) {
     let personaHtml = `<div class="table">
                               <div class="cont-entry">
-                                <div class="entry">${persona.id}  </div>
-                                <div class="entry">${persona.nombre}  </div>
-                                <div class="entry">${persona.apellidoPaterno}  </div>
-                                <div class="entry">${persona.apellidoMaterno}  </div>                              
+                                <div class="entry">'Nombre: ' ${persona.nombre}  </div>
+                                <div class="entry">'Apellidos: ' ${persona.apellidoPaterno}  </div>
+                                <div class="entry">${persona.apellidoMaterno}  </div>
+                                <div class="entry">'Correo: ' ${persona.correo}  </div>                              
                               </div>
                               <div class="cont-edit">
                                 <div onclick="eliminarPersona(${persona.id})" class="entry eliminar">  Eliminar  </div>

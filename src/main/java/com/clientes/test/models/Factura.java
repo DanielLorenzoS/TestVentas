@@ -1,50 +1,86 @@
 package com.clientes.test.models;
 
-import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import org.springframework.lang.NonNull;
+import com.sun.istack.NotNull;
 import org.springframework.validation.annotation.Validated;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Validated
 @Entity
 @Table(name = "Factura")
 public class Factura {
-  @Id
-  @NonNull
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
 
-  @NonNull
-  private Date fecha;
+    @Id
+    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @NotNull
+    private Long personaId;
+    @NotNull
+    private String fecha;
+    @NotNull
+    private String concepto;
+    @NotNull
+    private String iva;
+    @NotNull
+    private double cuotaIva;
+    @NotNull
+    private double total;
 
-  @NonNull
-  private int monto;
+    public Long getId() {
+        return id;
+    }
 
-  public Long getId() {
-    return id;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    public Long getPersonaId() {
+        return personaId;
+    }
 
-  public Date getFecha() {
-    return fecha;
-  }
+    public void setPersonaId(Long personaId) {
+        this.personaId = personaId;
+    }
 
-  public void setFecha(Date fecha) {
-    this.fecha = fecha;
-  }
+    public String getFecha() {
+        return fecha;
+    }
 
-  public int getMonto() {
-    return monto;
-  }
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 
-  public void setMonto(int monto) {
-    this.monto = monto;
-  }
+    public String getConcepto() {
+        return concepto;
+    }
+
+    public void setConcepto(String concepto) {
+        this.concepto = concepto;
+    }
+
+    public String getIva() {
+        return iva;
+    }
+
+    public void setIva(String iva) {
+        this.iva = iva;
+    }
+
+    public double getCuotaIva() {
+        return cuotaIva;
+    }
+
+    public void setCuotaIva(double cuotaIva) {
+        this.cuotaIva = cuotaIva;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
 }

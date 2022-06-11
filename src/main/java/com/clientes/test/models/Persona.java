@@ -5,7 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import org.springframework.lang.NonNull;
+
+import com.sun.istack.NotNull;
 import org.springframework.validation.annotation.Validated;
 
 @Validated
@@ -13,25 +14,25 @@ import org.springframework.validation.annotation.Validated;
 @Table(name = "Persona")
 public class Persona {
   @Id
-  @NonNull
+  @NotNull
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @NonNull
+  @NotNull
   private String nombre;
 
-  @NonNull
+  @NotNull
   private String apellidoPaterno;
 
   private String apellidoMaterno;
 
-  @NonNull
+  @NotNull
   private int identificacion;
 
-  @NonNull
+  @NotNull
   private String correo;
 
-  @NonNull
+  @NotNull
   private String contraseña;
 
   public Long getId() {
