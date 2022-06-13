@@ -20,4 +20,12 @@ public class Ventas {
     public ArrayList<Factura> findFacturas(){
         return (ArrayList<Factura>) facturaRepository.findAll();
     }
+    public boolean deleteById(Long id) {
+        try {
+            facturaRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }

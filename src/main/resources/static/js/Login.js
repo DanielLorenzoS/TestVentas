@@ -6,7 +6,7 @@ function getHeaders() {
     };
 }
 
-async function entrarPerfil() {
+entrarPerfil = async () => {
     let persona = {};
     persona.correo = document.querySelector("#txtCorreo").value;
     persona.password = document.querySelector("#txtContraseña").value;
@@ -19,13 +19,6 @@ async function entrarPerfil() {
     const res = await request.json();
     let pivote;
     console.log(res.map((e) => pivote = (e.contraseña)));
-
-    if (persona.correo == "" && persona.correo == " ") {
-        alert("El campo de correo está vacío")
-    }
-    if (persona.password == "" && persona.password == " ") {
-        alert("El campo de correo está vacío")
-    }
 
     if (persona.password == pivote) {
         window.location.href = "./personas.html";

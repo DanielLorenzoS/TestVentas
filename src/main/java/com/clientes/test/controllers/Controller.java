@@ -24,8 +24,8 @@ public class Controller {
     @GetMapping
     public ArrayList<Persona> findPersonas() {
         return personaService.findPersonas();
-    }
-
+    } 
+    
     @PostMapping
     public Persona guardarPersona(@RequestBody Persona persona) {
         return this.personaService.guardarPersona(persona);
@@ -39,9 +39,7 @@ public class Controller {
     }
 
     @DeleteMapping(value = "/{identificacion}")
-    public String eliminarPersonaPorIdentificador(
-            @PathVariable("identificacion") Integer identificacion
-    ) {
+    public String eliminarPersonaPorIdentificador(@PathVariable("identificacion") Integer identificacion) {
         boolean ok =
                 this.personaService.eliminarPersonaPorIdentificacion(identificacion);
         if (ok) {
